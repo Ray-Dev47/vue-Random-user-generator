@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./style.css" />
+		<title>Random User Generator</title>
+	</head>
+	<body>
+		<div id="app">
+			<img
+				:class="gender"
+				v-bind:src="picture"
+				:alt="`${firstName} ${lastName}`"
+			/>
+			<h1>{{firstName}} {{lastName}}</h1>
+			<h3>Email: {{email}}</h3>
+			<h3>Gender: {{gender}}</h3>
+			<button v-on:click="getuser()" :class="gender">Get Random User</button>
+		</div>
+
+		<script src="https://www.unpkg.com/vue@3.0.5"></script>
+		<script src="./app.js"></script>
+	</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Course</title>
+</head>
+<script src="./vue.min.js"></script>
+<body>
+    <div id="app">
+        <input type="text" v-on:input="changeTitle">
+        <p>{{title}}</p>
+    </div>
+
+    <script>
+        new Vue ({
+            el: '#app',
+            data: {
+                title: 'Hello World!'
+            },
+            methods: {
+                changeTitle: function(event){
+                    this.target = event.target.value;
+                }
+            }
+        });
+    </script>
+</body>
+</html> -->
